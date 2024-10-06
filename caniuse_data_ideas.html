@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch and retrieve random 'Can I Use' data</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" href="caniuse_data_style.css">
+</head>
+
+<body>
+    <div class="theme-switcher">
+        <input id="switcher" type="checkbox" class="">
+        <label for="switcher"></label>
+      </div>
+    <div class="container u-large-rounded u-margin u-text-center u-shadow u-bg-light">
+        <header class="header">
+            <h2 class="u-text-primary">Frontend feature ideas</h2>
+            <h3 class="u-text-primary">Using 'Can I Use' data</h3>
+            <p class="u-padding">
+                This tool allows you to access web-based features that are broadly supported by most browsers, offering
+                at
+                least 95% coverage.
+            </p>
+            <p class="u-padding">
+                <strong class="u-text-primary">How to use:</strong> Choose the number of web features you need. Optionally, you can
+                filter by categories by selecting or deselecting the category checkboxes. By default, the tool suggests
+                5
+                feature ideas across all categories.
+            </p>
+            <p class="u-padding">
+                The retrieved data is displayed in card format. Each card includes the name of the web feature, which
+                links
+                to the 'Can I Use' webpage in a new tab. Additionally, it shows the overall browser support percentage
+                and
+                relevant category tags.
+            </p>
+        </header>
+
+        <section class="form-container">
+            <form action="" method="get" class="u-flex u-flex-wrap u-padding-large">
+                <div class="num-input u-flex u-flex-column">
+                    <label for="numFeatures">How many feature ideas you want?</label>
+                    <input type="text" inputmode="numeric" name="numFeatures" id="numFeatures" min="1" value="5"
+                        aria-label="Number of feature ideas to generate" class="u-inside-padding">
+                </div>
+                <fieldset class="checkbox-input u-flex u-flex-wrap">
+                    <legend>Selected categories</legend>
+                    <!-- Category checkboxes and values updated manually, not  rendered from original JSON -->
+                    <input type="checkbox" name="category" checked id="css" class="hidden" value="CSS">
+                    <label for="css" class="u-rounded u-inside-padding">CSS</label>
+
+                    <input type="checkbox" name="category" checked id="html5" class="hidden" value="HTML5">
+                    <label for="html5" class="u-rounded u-inside-padding">HTML5</label>
+
+                    <input type="checkbox" name="category" checked id="js" class="hidden" value="JS">
+                    <label for="js" class="u-rounded u-inside-padding">JS</label>
+
+                    <input type="checkbox" name="category" checked id="jsapi" class="hidden" value="JS API">
+                    <label for="jsapi" class="u-rounded u-inside-padding">JS API</label>
+
+                    <input type="checkbox" name="category" checked id="other" class="hidden" value="Other">
+                    <label for="other" class="u-rounded u-inside-padding">Other</label>
+
+                    <input type="checkbox" name="category" checked id="security" class="hidden" value="Security">
+                    <label for="security" class="u-rounded u-inside-padding">Security</label>
+
+                    <input type="checkbox" name="category" checked id="svg" class="hidden" value="SVG">
+                    <label for="svg" class="u-rounded u-inside-padding">SVG</label>
+                </fieldset>
+
+                <div class="submit-input">
+                    <input type="submit" value="Get ideas!" class="u-padding u-rounded u-bg-primary">
+                </div>
+            </form>
+        </section>
+
+        <section role="region" aria-labelledby="ideas-heading" aria-live="polite" class="u-padding-large u-padding-top-0">
+            <h2 id="ideas-heading">Frontend Feature Ideas</h2>
+            <div class="grid-container u-grid" id="output"></div>
+        </section>
+    </div>
+
+    <script src="caniuse_data_functions.js" async></script>
+</body>
+
+</html>
