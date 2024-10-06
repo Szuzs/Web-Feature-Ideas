@@ -1,6 +1,6 @@
 # Web-Feature-Ideas
  
-This tool allows you to access web-based features that are broadly supported by most browsers, offering at least 95% coverage.
+This tool allows you to access web-based features that are broadly supported by most browsers, offering at least 95% coverage. It gets the data from the 'Can I Use' website.
 
 ## How to use
 Choose the number of web features you need. Optionally, you can filter by categories by selecting or deselecting the category checkboxes. By default, the tool suggests 5 feature ideas across all categories.
